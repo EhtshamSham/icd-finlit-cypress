@@ -1,0 +1,14 @@
+[
+  {
+    "email": "unregstudent@yopmail.com",
+    "firstName": "Test",
+    "lastName": "User",
+    "password": "RNSsol@1"
+  },
+  {
+    "email": "unreginstructor@yopmail.com",
+    "firstName": "Test",
+    "lastName": "User",
+    "password": "RNSsol@1"
+  }
+]
