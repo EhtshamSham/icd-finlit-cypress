@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-09-28T13:00:16.452Z",
+    "end": "2021-09-28T13:00:30.291Z",
+    "duration": 13839,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ea93f6a3-a54a-446c-8657-7c49842c32e5",
+      "title": "",
+      "fullFile": "cypress/integration/a11y/login.access.js",
+      "file": "cypress/integration/a11y/login.access.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "21062b1b-cc80-4374-b529-e2512ffacad6",
+          "title": "A11y",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login page is accessible",
+              "fullTitle": "A11y login page is accessible",
+              "timedOut": null,
+              "duration": 13786,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.checkPageA11y(\"http://61.85.154.156:3021/login\");",
+              "err": {
+                "message": "AssertionError: 4 accessibility violations were detected: expected 4 to equal 0",
+                "estack": "AssertionError: 4 accessibility violations were detected: expected 4 to equal 0\n    at Context.eval (http://61.85.154.156:3021/__cypress/tests?p=cypress/support/index.js:37659:20)",
+                "diff": null
+              },
+              "uuid": "9066841f-5646-43c5-ac93-966c9a307260",
+              "parentUUID": "21062b1b-cc80-4374-b529-e2512ffacad6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "9066841f-5646-43c5-ac93-966c9a307260"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 13786,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "embeddedScreenshots": true,
+        "charts": true,
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

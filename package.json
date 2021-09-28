@@ -4,10 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "combine-reports": "mochawesome-merge",
+    "generate-report": "",
     "cy:open": "npx cypress open",
-    "cy:run": "npx cypress run",
-    "e2e:chrome": "cypress run --browser chrome --headless",
-    "e2e:firefox": "cypress run --browser firefox --headless"
+    "cy:api": "cypress run --spec 'cypress/integration/api/*.js'",
+    "cy:a11y": "cypress run --spec 'cypress/integration/a11y/*.js'",
+    "cy:e2e:edge:hs": "cypress run --browser edge --spec 'cypress/integration/e2e/*.js' --headless",
+    "cy:e2e:chrome:hs": "cypress run --browser chrome --spec 'cypress/integration/e2e/*.js' --headless",
+    "cy:e2e:firefox:hs": "cypress run --browser firefox --spec 'cypress/integration/e2e/*.js' --headless",
+    "docker:run": "docker run -p 3000:3000 -d  heroku/nodejs-hello-world"
   },
   "author": "",
   "license": "ISC",

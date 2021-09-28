@@ -1,11 +1,11 @@
 {
+  "baseUrl": "http://61.85.154.156:3021",
   "reporter": "mochawesome",
+  "video": false,
   "reporterOptions": {
-    "reportDir": "cypress/reports",
-    "reportName": "ICD - FinLit report",
     "embeddedScreenshots": true,
     "charts": true,
-    "overwrite": true,
+    "overwrite": false,
     "html": true,
     "json": true
   },
