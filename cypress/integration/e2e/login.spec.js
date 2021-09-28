@@ -23,10 +23,4 @@ describe("Verify the login functionality of any user", () => {
       cy.login(registeredUser[1].email, "dummypassword");
     });
   });
-
-  it("should not login With registered email and incorrect password", () => {
-    cy.get("@registeredUser").then((registeredUser) => {
-      cy.login(registeredUser[1].email, "dummypassword");
-    });
-  });
 });

@@ -43,14 +43,14 @@ function callback(violations) {
       $el: nodes,
       message: `[${violation.help}](${violation.helpUrl})`,
     });
-    violation.nodes.forEach(({ target }) => {
-      Cypress.log({
-        name: '🔧',
-        consoleProps: () => violation,
-        $el: Cypress.$(target.join(",")),
-        message: target,
-      });
-    });
+    // violation.nodes.forEach(({ target }) => {
+    //   Cypress.log({
+    //     name: '🔧',
+    //     consoleProps: () => violation,
+    //     $el: Cypress.$(target.join(",")),
+    //     message: target,
+    //   });
+    // });
   });
 }
 
