@@ -2,7 +2,7 @@
 
 // -- ui --
 Cypress.Commands.add(
-  "signup",
+  "signupstudent",
   (email, firstName, lastName, password, confirmPassword) => {
     cy.get("#email").type(email);
     cy.get(":nth-child(1) > .form-group > #name").type(firstName);
@@ -15,6 +15,22 @@ Cypress.Commands.add(
     }).then((queryResponse) => {
       cy.log(queryResponse);
     });
+  }
+);
+
+Cypress.Commands.add(
+  "signupinstructor",
+  (email, firstName, lastName, password, confirmPassword) => {
+    cy.get("#email").type(email);
+    cy.get(":nth-child(1) > .form-group > #name").type(firstName);
+    cy.get(":nth-child(2) > .form-group > #name").type(lastName);
+    cy.get('.MuiSelect-root').click();
+    cy.get('.Mui-selected').click();
+    cy.get("#createpassword").type(password);
+    cy.get("#confirmpassword").type(confirmPassword);
+    cy.get('.btn').click();
+    
+   
   }
 );
 
@@ -59,3 +75,5 @@ Cypress.Commands.add("checkPageA11y", (path) => {
   cy.injectAxe();
   cy.checkA11y(null, null, callback);
 });
+
+

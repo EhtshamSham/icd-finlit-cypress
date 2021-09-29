@@ -10,5 +10,12 @@
     "firstName": "Test",
     "lastName": "User",
     "password": "RNSsol@1"
+  },
+  {
+    "email": "omer777@yopmail.com",
+    "firstName": "Test",
+    "lastName": "User",
+    "password": "RNSsol@1",
+    "confirmPassword" : "RNSsol@1"
   }
 ]
