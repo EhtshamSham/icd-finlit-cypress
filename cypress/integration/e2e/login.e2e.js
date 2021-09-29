@@ -2,7 +2,7 @@
 
 describe("Verify the login functionality of any user", () => {
   beforeEach(() => {
-    cy.visit("http://61.85.154.156:3021/login");
+    cy.visit("/login");
     cy.fixture("registeredUser").as("registeredUser");
   });
 
