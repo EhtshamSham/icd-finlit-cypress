@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe("Verify the login functionality of any user", () => {
+describe("Login", () => {
   beforeEach(() => {
     cy.visit("/login");
     cy.fixture("registeredUser").as("registeredUser");

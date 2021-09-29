@@ -2,7 +2,7 @@
 
 // -- ui --
 Cypress.Commands.add(
-  "signupstudent",
+  "registerStudent",
   (email, firstName, lastName, password, confirmPassword) => {
     cy.get("#email").type(email);
     cy.get(":nth-child(1) > .form-group > #name").type(firstName);
@@ -70,8 +70,7 @@ function callback(violations) {
   });
 }
 
-Cypress.Commands.add("checkPageA11y", (path) => {
-  cy.visit(path);
+Cypress.Commands.add("checkPageA11y", () => {
   cy.injectAxe();
   cy.checkA11y(null, null, callback);
 });

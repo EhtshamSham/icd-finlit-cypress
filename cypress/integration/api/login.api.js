@@ -1,7 +1,7 @@
 /// <reference types = "Cypress"/>
 
 describe("Requests suite", () => {
-  it("Post request", () => {
+  it("POST", () => {
     cy.request({
       method: "POST",
       url: "http://61.85.154.156:3016/api/auth/login",
