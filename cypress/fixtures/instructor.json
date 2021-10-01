@@ -4,5 +4,9 @@
   "lastName": "User",
   "password": "RNSsol@1",
   "passwordConfirmation": "RNSsol@1",
-  "roleId": "3"
+  "roleId": "1",
+  "gender": "Male",
+  "profession": "Software Engineer",
+  "country": "PAK",
+  "address": "8 Wionea Street Richmond UK"
 }
