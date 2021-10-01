@@ -12,13 +12,3 @@ module.exports = (on) => {
       require("cypress-postgres")(query.query, query.connection),
   });
 };
-
-module.exports = (on, config) => {
-  on("before:browser:launch", (browser = {}, launchOptions) => {
-    prepareAudit(launchOptions);
-  });
-
-  on("task", {
-    lighthouse: lighthouse(),
-  });
-};

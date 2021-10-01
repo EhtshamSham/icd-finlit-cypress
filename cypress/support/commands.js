@@ -13,60 +13,33 @@ Cypress.Commands.add("addUser", (body) => {
 });
 Cypress.Commands.add("deleteUser", (email) => {
   cy.task("dbQuery", {
-    query: `DELETE from users_roles WHERE \"usersId"\ = (SELECT  id FROM users WHERE email='${email}') ;`,
+    query: `DELETE from users_roles WHERE \"usersId"\ = (SELECT  id FROM users WHERE email='${email}');`,
   });
   cy.task("dbQuery", {
-    query: `delete from users  where email='${email}';) ;`,
+    query: `delete from users  where email='${email}';`,
   });
 });
 
 // -- ui --
 Cypress.Commands.add(
-  "signupInstructor",
-  (
-    email,
-    firstName,
-    lastName,
-    password,
-    confirmPassword,
-    address,
-    country,
-    gender,
-    profession
-  ) => {
+  "registerInstructor",
+  (email, firstName, lastName, password, confirmPassword, address) => {
     cy.get("#email").type(email);
     cy.get(":nth-child(1) > .form-group > #name").type(firstName);
     cy.get(":nth-child(2) > .form-group > #name").type(lastName);
     cy.get("#createpassword").type(password);
     cy.get("#confirmpassword").type(confirmPassword);
-    cy.get(".MuiSelect-root").click();
-    cy.get('.MuiList-root > [tabindex="-1"]').click();
-    cy.get(
-      ":nth-child(6) > .MuiFormControl-root > .MuiInputBase-root > .MuiSelect-root"
-    ).click();
-    cy.get('[data-value="KSA"]').click();
     cy.get("#address").type(address);
-    cy.get(
-      ":nth-child(8) > .MuiFormControl-root > .MuiInputBase-root > .MuiSelect-root"
-    ).click();
-    cy.get('.MuiList-root > [tabindex="-1"]').click();
-    cy.get(
-      ":nth-child(9) > .MuiFormControl-root > .MuiInputBase-root > .MuiSelect-root"
-    ).click();
-    cy.get('[data-value="Medical and Health Services"]').click();
-
     cy.get(".btn").click();
   }
 );
 
 Cypress.Commands.add(
-  "signupStudent",
+  "registerStudent",
   (email, firstName, lastName, password, confirmPassword) => {
     cy.get("#email").type(email);
     cy.get(":nth-child(1) > .form-group > #name").type(firstName);
     cy.get(":nth-child(2) > .form-group > #name").type(lastName);
-    cy.get(".MuiSelect-root").click();
-    cy.get(".Mui-selected").click();
     cy.get("#createpassword").type(password);
     cy.get("#confirmpassword").type(confirmPassword);
     cy.get(".btn").click();
