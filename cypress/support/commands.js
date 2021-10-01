@@ -1,6 +1,6 @@
-import "cypress-audit/commands";
 
 // -- api --
+
 Cypress.Commands.add("addUser", (body) => {
   cy.request({
     method: "POST",
@@ -11,6 +11,9 @@ Cypress.Commands.add("addUser", (body) => {
     body,
   });
 });
+
+// -- db --
+
 Cypress.Commands.add("deleteUser", (email) => {
   cy.task("dbQuery", {
     query: `DELETE from users_roles WHERE \"usersId"\ = (SELECT  id FROM users WHERE email='${email}');`,
@@ -23,10 +26,12 @@ Cypress.Commands.add("deleteUser", (email) => {
 // -- ui --
 Cypress.Commands.add(
   "registerInstructor",
-  (email, firstName, lastName, password, confirmPassword, address) => {
+  (email, firstName, lastName, password, confirmPassword,address) => {
     cy.get("#email").type(email);
     cy.get(":nth-child(1) > .form-group > #name").type(firstName);
     cy.get(":nth-child(2) > .form-group > #name").type(lastName);
+    cy.get('.MuiSelect-root').click();
+    cy.get('.MuiList-root > [tabindex="-1"]').click();
     cy.get("#createpassword").type(password);
     cy.get("#confirmpassword").type(confirmPassword);
     cy.get("#address").type(address);
