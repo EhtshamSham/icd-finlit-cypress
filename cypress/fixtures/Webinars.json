@@ -1,0 +1,18 @@
+{
+    "type": "Webinar",
+    "eventImage":"cypress/fixtures/Images/webinar.jpg",
+    "data": {
+        "mainTitle": "Block Chain Security",
+        "subTitle": "Blockchain",
+        "startTime": "7:30 pm",
+        "endTime": "string",
+        "startDate": "Date",
+        "endDate": "Date",
+        "description": "The crypto currency is currently in use and have some serious security concerns due to its usage. ",
+        "price": "50",
+        "redirectionUrl": "https://google.com/",
+        "presentor": "David Parker "
+    }
+}
+
+

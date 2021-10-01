@@ -1,0 +1,16 @@
+
+
+  {
+    "email": "omer5464@yopmail.com",
+    "firstName": "Test",
+    "lastName": "User",
+    "password": "RNSsol@1",
+    "passwordConfirmation" : "RNSsol@1",
+    "roleId" : "1",
+    "gender" : "Male",
+    "profession" : "Software Engineer",  
+     "country"  : "PAK",
+      "address" : "8 Wionea Street Richmond UK"
+
+  
+  }
