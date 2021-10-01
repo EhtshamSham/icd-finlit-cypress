@@ -1,4 +1,4 @@
-
+import "cypress-audit/commands";
 
 // -- ui --
 Cypress.Commands.add(
@@ -19,7 +19,7 @@ Cypress.Commands.add(
 );
 
 Cypress.Commands.add(
-  "signupinstructor",
+  "registerEducator",
   (email, firstName, lastName, password, confirmPassword) => {
     cy.get("#email").type(email);
     cy.get(":nth-child(1) > .form-group > #name").type(firstName);
@@ -29,8 +29,6 @@ Cypress.Commands.add(
     cy.get("#createpassword").type(password);
     cy.get("#confirmpassword").type(confirmPassword);
     cy.get('.btn').click();
-    
-   
   }
 );
 
