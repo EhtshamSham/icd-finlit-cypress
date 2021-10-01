@@ -1,7 +1,5 @@
 /// <reference types="cypress" />
 
-const { lighthouse, prepareAudit } = require("cypress-audit");
-
 /**
  * @type {Cypress.PluginConfig}
  */

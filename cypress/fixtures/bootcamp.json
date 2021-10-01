@@ -1,0 +1,15 @@
+{
+  "type": "Bootcamp",
+  "eventImage": "cypress/fixtures/Images/bootcam.jpg",
+  "data": {
+    "mainTitle": "Roadmap towards Security ",
+    "subTitle": "Database Security",
+    "startTime": "10:15 am",
+    "endTime": "12:15 pm",
+    "startDate": "14/10/2021",
+    "endDate": "20/10/2021",
+    "description": "This Bootcamp will guide how to adopt the latest technologies to enhance database security.",
+    "price": "100",
+    "redirectionUrl": "https://google.com"
+  }
+}
