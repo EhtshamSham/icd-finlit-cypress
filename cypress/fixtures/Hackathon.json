@@ -1,0 +1,15 @@
+{
+    "type": "Hackathon",
+    "eventImage": "cypress/fixtures/Images/hackathon.jpg",
+    "data": {
+        "mainTitle": "Oracle Database",
+        "subTitle": "Database",
+        "startTime": "08:15 AM",
+        "endTime": "10:15 PM",
+        "startDate": "30/09/2021",
+        "endDate": "10/10/2021",
+        "description": "The database concepts will be discussed here in this event and about the latest developments.",
+        "price": "50",
+        "redirectionUrl": "https://google.com/"
+    }
+}
