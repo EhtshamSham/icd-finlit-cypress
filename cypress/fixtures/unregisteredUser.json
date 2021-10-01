@@ -6,16 +6,29 @@
     "password": "RNSsol@1"
   },
   {
-    "email": "unreginstructor@yopmail.com",
-    "firstName": "Test",
-    "lastName": "User",
-    "password": "RNSsol@1"
-  },
-  {
-    "email": "omer777@yopmail.com",
+    "email": "omer5464@yopmail.com",
     "firstName": "Test",
     "lastName": "User",
     "password": "RNSsol@1",
     "confirmPassword" : "RNSsol@1"
+    
+  },
+ 
+  {
+    "email": "omer5461@yopmail.com",
+    "firstName": "Test",
+    "lastName": "User",
+    "password": "RNSsol@1",
+    "confirmPassword" : "RNSsol@1"
+  },
+
+  {
+    "email": "omer5459@yopmail.com",
+    "firstName": "Test",
+    "lastName": "User",
+    "password": "RNSsol@1",
+    "confirmPassword" : "RNSsol@12"
   }
+
+
 ]

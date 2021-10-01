@@ -2,24 +2,30 @@
 
 // -- ui --
 Cypress.Commands.add(
-  "registerStudent",
-  (email, firstName, lastName, password, confirmPassword) => {
+  "signupInstructor",
+  (email, firstName, lastName, password, confirmPassword, address,country, gender, profession) => {
     cy.get("#email").type(email);
     cy.get(":nth-child(1) > .form-group > #name").type(firstName);
     cy.get(":nth-child(2) > .form-group > #name").type(lastName);
     cy.get("#createpassword").type(password);
     cy.get("#confirmpassword").type(confirmPassword);
+    cy.get('.MuiSelect-root').click();
+    cy.get('.MuiList-root > [tabindex="-1"]').click();
+    cy.get(':nth-child(6) > .MuiFormControl-root > .MuiInputBase-root > .MuiSelect-root').click();
+    cy.get('[data-value="KSA"]').click();
+    cy.get('#address').type(address);
+    cy.get(':nth-child(8) > .MuiFormControl-root > .MuiInputBase-root > .MuiSelect-root').click();
+    cy.get('.MuiList-root > [tabindex="-1"]').click();
+    cy.get(':nth-child(9) > .MuiFormControl-root > .MuiInputBase-root > .MuiSelect-root').click();
+    cy.get('[data-value="Medical and Health Services"]').click();
+
     cy.get(".btn").click();
-    cy.task("dbQuery", {
-      query: `UPDATE users SET \"emailConfirmed\"=true where email=${email};`,
-    }).then((queryResponse) => {
-      cy.log(queryResponse);
-    });
+   
   }
 );
 
 Cypress.Commands.add(
-  "signupinstructor",
+  "signupStudent",
   (email, firstName, lastName, password, confirmPassword) => {
     cy.get("#email").type(email);
     cy.get(":nth-child(1) > .form-group > #name").type(firstName);
@@ -33,6 +39,7 @@ Cypress.Commands.add(
    
   }
 );
+
 
 Cypress.Commands.add("login", (email, password) => {
   cy.get("#email").type(email);

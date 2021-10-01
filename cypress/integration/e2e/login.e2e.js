@@ -6,12 +6,12 @@ describe("Login", () => {
     cy.fixture("registeredUser").as("registeredUser");
   });
 
-  it("should login With registered email and correct password", () => {
+  it("login With registered email and correct password for student", () => {
     cy.get("@registeredUser").then((registeredUser) => {
       cy.login(registeredUser[0].email, registeredUser[0].password);
     });
   });
-
+/*
   it("should not login With unregistered email and correct password", () => {
     cy.get("@registeredUser").then((registeredUser) => {
       cy.login("testemail@yopmail.com", registeredUser[0].password);
@@ -22,5 +22,5 @@ describe("Login", () => {
     cy.get("@registeredUser").then((registeredUser) => {
       cy.login(registeredUser[1].email, "dummypassword");
     });
-  });
+  });*/
 });

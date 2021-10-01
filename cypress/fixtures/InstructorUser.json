@@ -1,0 +1,55 @@
+
+[
+    {
+    "email": "omer5464@yopmail.com",
+    "firstName": "Test",
+    "lastName": "User",
+    "password": "RNSsol@1",
+    "confirmPassword" : "RNSsol@1",
+    "address": "AL rahim archade"
+  },
+  {
+    "email": "omer5463@yopmail.com",
+    "firstName": "Test",
+    "lastName": "User",
+    "password": "RNSsol@1",
+    "confirmPassword" : "RNSsol@1",
+    "address": "AL rahim archade"
+  },
+
+  {
+    "email": "omer5463@.yopmail.com",
+    "firstName": "Test",
+    "lastName": "User",
+    "password": "RNSsol@1",
+    "confirmPassword" : "RNSsol@1",
+    "address": "AL rahim archade"
+  },
+
+  {
+    "email": "omer5463@.yopmail.com",
+    "firstName": "Test",
+    "lastName": "User",
+    "password": "RNSsol@1",
+    "confirmPassword" : "RNSsol@12",
+    "address": "AL rahim archade"
+  },
+
+  {
+    "email": "omer5463@.yopmail.com",
+    "firstName": "Test",
+    "lastName": "User",
+    "password": "rnssol@123",
+    "confirmPassword" : "rnssol@123",
+    "address": "AL rahim archade"
+  },
+
+  {
+    "email": "omer5463@.yopmail.com",
+    "firstName": "omer/8898989#@#$@#%#%",
+    "lastName": "qayyum#$@$#@%#%$#^@#^",
+    "password": "rnssol@123",
+    "confirmPassword" : "rnssol@123",
+    "address": "AL rahim archade"
+  }
+]
