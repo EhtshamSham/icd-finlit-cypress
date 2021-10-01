@@ -1,12 +1,15 @@
 {
+  "baseUrl": "http://192.168.88.60:5000/",
+  "screenshotOnRunFailure": true,
+  "screenshotsFolder": "cypress/reports/mocha/assets",
   "reporter": "mochawesome",
+  "video": false,
   "reporterOptions": {
-    "reportDir": "cypress/reports",
-    "reportName": "ICD - FinLit report",
+    "reportDir": "cypress/reports/mocha",
     "embeddedScreenshots": true,
     "charts": true,
-    "overwrite": true,
-    "html": true,
+    "overwrite": false,
+    "html": false,
     "json": true
   },
   "db": {
