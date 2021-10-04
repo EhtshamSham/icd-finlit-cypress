@@ -1,25 +1,25 @@
 /// <reference types="cypress" />
 
 describe("Login", () => {
-    
-   before(()=>{
-
-    // cy.fixture('educator').then ((educator)=>{
-    //     this.educator=educator
-    // });
-   
-   
-    beforeEach(() => {
-      cy.visit("/login");
-      cy.addUser(this.educator);
+  let educatorUser
+  before(function () {
+    cy.fixture("educator").then(function (educator) {
+      cy.deleteUser(educator.email)
+      cy.addUser(educator)
+      //cy.verifyEmail(educator.email)
+      educatorUser = educator;
     });
-  
-    it("should login successfully", () => {
-      cy.login(this.educator.email, this.educator.password);
+  });
 
-    });
-  
-   // afterEach(() => {
-   //   cy.deleteUser(email);
-   });
+  beforeEach(() => {
+    cy.visit("/login");
+  });
+
+  it("should login successfully", () => {
+    cy.login(educatorUser.email, educatorUser.password);
+  });
+
+  after(() => {
+    cy.deleteUser(educatorUser.email)
+  })
 });

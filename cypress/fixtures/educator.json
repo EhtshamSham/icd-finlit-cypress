@@ -1,9 +1,9 @@
 {
-  "email": "omer5464@yopmail.com",
+  "email": "testuser5@yopmail.com",
   "firstName": "Test",
   "lastName": "User",
-  "password": "RNSsol@1",
-  "passwordConfirmation": "RNSsol@1",
+  "password": "Test@12345",
+  "passwordConfirmation": "Test@12345",
   "roleId": "1",
   "gender": "Male",
   "profession": "Software Engineer",
