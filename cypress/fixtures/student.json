@@ -1,0 +1,8 @@
+{
+    "email": "testuser@yopmail.com",
+    "firstName": "Test",
+    "lastName": "User",
+    "password": "Test@12345",
+    "passwordConfirmation": "Test@12345",
+    "roleId": "3"
+  }

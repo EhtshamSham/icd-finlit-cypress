@@ -25,7 +25,7 @@ Cypress.Commands.add("deleteUser", (email) => {
 
 Cypress.Commands.add("verifyEmail", (email) => {
   cy.task("dbQuery", {
-    query: `UPDATE users SET \"emailConfirmed\"=true where email=${email}`,
+    query: `UPDATE users SET \"emailConfirmed\"=true where email='${email}'`,
   });
 });
 
