@@ -1,6 +1,6 @@
 {
   "type": "Hackathon",
-  "eventImage": "cypress/fixtures/Images/hackathon.jpg",
+  "eventImage": "images/hackathon.jpg",
   "data": {
     "mainTitle": "Oracle Database",
     "subTitle": "Database",

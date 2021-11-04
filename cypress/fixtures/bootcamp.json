@@ -1,6 +1,6 @@
 {
   "type": "Bootcamp",
-  "eventImage": "cypress/fixtures/Images/bootcam.jpg",
+  "eventImage": "images/bootcam.jpg",
   "data": {
     "mainTitle": "Roadmap towards Security ",
     "subTitle": "Database Security",

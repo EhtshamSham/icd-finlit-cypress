@@ -1,5 +1,5 @@
 {
-  "baseUrl": "http://192.168.88.60:5000",
+  "baseUrl": "http://61.85.154.156:3021/",
   "screenshotOnRunFailure": true,
   "screenshotsFolder": "cypress/reports/mocha/assets",
   "reporter": "mochawesome",
@@ -11,6 +11,9 @@
     "overwrite": false,
     "html": false,
     "json": true
+  },
+  "env": {
+    "MAILOSAUR_API_KEY": "CiblsQgQWUJa4uks"
   },
   "db": {
     "user": "rns",

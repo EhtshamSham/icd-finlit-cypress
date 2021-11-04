@@ -1,41 +1,49 @@
 /// <reference types="cypress" />
 
-describe("Student signup", () => {
-  let email = "t1@yopmail.com";
+const serverDomain = "c0sxzwsh.mailosaur.net";
+let emailAddress = "testUser@" + serverDomain;
+
+describe("student signup", () => {
   beforeEach(() => {
-    cy.visit("/signup");
-    cy.deleteUser(email);
+    cy.visit("signup");
+    cy.deleteUser(emailAddress);
   });
 
-  it("should register user", () => {
-    cy.registerStudent(email, "Test", "User", "Test@12345", "Test@12345");
-    cy.get(".Toastify__toast-body").should(
-      "have.text",
-      "Email has been sent to you for verification, Kindly verify your email to get access to the system."
+  it("with valid input values", () => {
+    cy.registerStudent(
+      emailAddress,
+      "Test",
+      "User",
+      "Test@12345",
+      "Test@12345"
     );
+    cy.get("h4 > span").should("have.text", "Your email has been verified");
   });
 
   afterEach(() => {
-    cy.deleteUser(email);
+    cy.deleteUser(emailAddress);
   });
 });
 
-describe("Educator signup", () => {
-  let email = "t1@yopmail.com";
+describe("educator signup", () => {
   beforeEach(() => {
-    cy.visit("/signup");
-    cy.deleteUser(email);
+    cy.visit("signup");
+    cy.deleteUser(emailAddress);
   });
 
-  it("should register user", () => {
-    cy.registerInstructor(email, "Omer", "Qayyum ", "Test@12345", "Test@12345", "Wionea Street");
-    cy.get(".Toastify__toast-body").should(
-      "have.text",
-      "Email has been sent to you for verification, Kindly verify your email to get access to the system."
+  it("with valid input values", () => {
+    cy.registerInstructor(
+      emailAddress,
+      "Test",
+      "User",
+      "Test@12345",
+      "Test@12345",
+      "Test address"
     );
+    cy.get("h4 > span").should("have.text", "Your email has been verified");
   });
 
   afterEach(() => {
-    cy.deleteUser(email);
+    cy.deleteUser(emailAddress);
   });
 });

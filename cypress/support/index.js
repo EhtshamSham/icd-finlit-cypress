@@ -10,9 +10,6 @@ Cypress.on("uncaught:exception", (err, runnable) => {
 Cypress.on("test:after:run", (test, runnable) => {
   if (test.state === "failed") {
     const screenshot = `assets/${Cypress.spec.name}/${runnable.parent.title} -- ${test.title} (failed).png`;
-    cy.log(`${test.title}`)
-    cy.log(`${runnable.parent.title}`)
-    cy.log(`${Cypress.spec.name}`)
     addContext({ test }, screenshot);
   }
 });
